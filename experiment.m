@@ -1,12 +1,12 @@
-%I=imread('test.jpg');
-%I=rgb2gray(I);
-%img=im2double(I);k=1;X=zeros(1,50325);
-%for i=1:183
- %   for j=1:275
- %       X(1,k)=img(i,j);
- %       k=k+1;
- %   end
-%end
+I=imread('test.jpg');
+I=rgb2gray(I);
+img=im2double(I);k=1;X=zeros(1,50325);
+for i=1:183
+    for j=1:275
+        X(1,k)=img(i,j);
+        k=k+1;
+    end
+end
 o=zeros(275,183);
 A=gen_random_A(180,275);
 y=A*transpose(img);
